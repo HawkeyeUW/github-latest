@@ -9,4 +9,4 @@ if __name__ == "__main__":
     response = requests.get("https://api.github.com/users/{}/events".format(username))
     events = json.loads(response.content)
 
-    print(events[-1]['created_at'])
+    print(events[0]['created_at'])
